@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Weather AQI</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<nav class="row" style="background: #337ab7; color: white;">
+		<h1 class="col-md-3 text-center">AQI</h1>
+	</nav>
+	<br />
+	<br />
+	<div class="container">
+		<div id="myCarousel" class="carousel slide">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="{{url_for('static', filename='images/bb.jpg')}}" class="d-block w-100">
+				</div>
+				<div class="item">
+					<img src="{{url_for('static', filename='images/logo.png')}}" class="d-block w-100">
+				</div>
+			</div>
+		</div>
+		<h4>Steel Weather Free Responsive Website Template
+			The Steel Weather Free Responsive Website Template is a sleek and dark template
+			that is completely editable. The bold design showcases your images nicely while
+			including clean areas for text. Even though this template was designed for a weather
+			website, you can easily edit it to fit a wide variety of website types. If you decide
+			to use this template, we would love to see it up and running! Drop us a link to your site
+			in the comments if you're interested.
+		</h4>
+		<br>
+		<br>
+		<form class="form-inline">
+			<div class="form-group mx-sm-3 mb-2">
+				<label>Enter the City:</label>
+				<input type="text" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-primary mb-2">Submit</button>
+		</form>
+	</div>
+</body>
+
+</html>
