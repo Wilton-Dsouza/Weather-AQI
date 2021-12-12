@@ -188,7 +188,8 @@
 			<div style="margin: 10px;">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<a class="navbar-brand" style="color: azure; font-size: 30px;" href="{{url_for('Home')}}"><img src="{{url_for('static', filename='images/aqi-logo.png')}}"></a>
+						<a class="navbar-brand" style="color: azure; font-size: 30px;" href="{{url_for('Home')}}"><img
+								src="{{url_for('static', filename='images/aqi-logo.png')}}"></a>
 					</div>
 					<ul class="nav navbar-nav" style="float: right;">
 						<li class="active"><a href="{{url_for('Home')}}">Home</a></li>
@@ -237,52 +238,36 @@
 		</div>
 		<br>
 		<br>
-		<div id="description">
-			<div>
-				<h1 style="text-align: center;">About</h1>
+		<div style="width: 100%;">
+			<div id="description" class="container" style="width: 40%; float: left; ">
+				<h1 style="text-align: center; font-family: Garamond, serif;">About</h1>
 				<br>
-				<h4>Steel Weather Free Responsive Website Template
-					The Steel Weather Free Responsive Website Template is a sleek and dark template
-					that is completely editable. The bold design showcases your images nicely while
-					including clean areas for text. Even though this template was designed for a weather
-					website, you can easily edit it to fit a wide variety of website types. If you decide
-					to use this template, we would love to see it up and running! Drop us a link to your site
-					in the comments if you're interested.
+				<h4>AQI is a website which is used to give Air quality Index.
 				</h4>
-				<h4>Steel Weather Free Responsive Website Template
-					The Steel Weather Free Responsive Website Template is a sleek and dark template
-					that is completely editable. The bold design showcases your images nicely while
-					including clean areas for text. Even though this template was designed for a weather
-					website, you can easily edit it to fit a wide variety of website types. If you decide
-					to use this template, we would love to see it up and running! Drop us a link to your site
-					in the comments if you're interested.
+				<h4>It takes the city name has the Input and it returns the various parameters related to Air
+					quality
+					and also shows the whether city has high level of air pollution or not.
 				</h4>
-				<h4>Steel Weather Free Responsive Website Template
-					The Steel Weather Free Responsive Website Template is a sleek and dark template
-					that is completely editable. The bold design showcases your images nicely while
-					including clean areas for text. Even though this template was designed for a weather
-					website, you can easily edit it to fit a wide variety of website types. If you decide
-					to use this template, we would love to see it up and running! Drop us a link to your site
-					in the comments if you're interested.
+				<h4>The AQI is user friendly and There is no registering or sign in involved.
 				</h4>
-				<h4>Steel Weather Free Responsive Website Template
-					The Steel Weather Free Responsive Website Template is a sleek and dark template
-					that is completely editable. The bold design showcases your images nicely while
-					including clean areas for text. Even though this template was designed for a weather
-					website, you can easily edit it to fit a wide variety of website types. If you decide
-					to use this template, we would love to see it up and running! Drop us a link to your site
-					in the comments if you're interested.
+				<h4>The website also has an Integrated maps in it for enchanced experience.
 				</h4>
 			</div>
+			<div id="secondDivistion" style="margin-left: 50%;">
+				<img src="{{url_for('static', filename='images/aqi1.gif')}}" class="d-block w-100">
+			</div>
 		</div>
-		<br>
-		<br>
+	</div>
+
+	<br>
+	<br>
 	</div>
 	<!-- Site footer -->
 	<footer class="site-footer">
 		<div class="container">
 			<div class="row">
-				<p style=" margin-top: 20px;margin-bottom:100px;text-align: center;" class="copyright-text">Copyright &copy; 2021 All Rights Reserved by Group 2</p>
+				<p style=" margin-top: 20px;margin-bottom:100px;text-align: center;" class="copyright-text">Copyright
+					&copy; 2021 All Rights Reserved by Group 2</p>
 			</div>
 		</div>
 	</footer>
@@ -291,6 +276,10 @@
 	$('.carousel').carousel({
 		interval: 2000
 	})
+	// function loading() {
+	// 	$("#secondDivistion").show();
+	// 	//$("#content").hide();       
+	// }
 </script>
 
 </html>
