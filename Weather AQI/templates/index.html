@@ -16,9 +16,20 @@
 </head>
 
 <body>
-	<nav class="row" style="background: #337ab7; color: white;">
-		<h1 class="col-md-3 text-center">AQI</h1>
-	</nav>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div style="margin: 10px;"> 
+			<div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" style="color: azure; font-size: 30px;" href="#">AQI</a>
+				</div>
+				<ul class="nav navbar-nav" style="float: right;">
+				  <li class="active"><a href="{{url_for('Home')}}">Home</a></li>
+				  <li><a href="{{ url_for('Home', _anchor='description') }}">Description</a></li>
+				  <li><a href="{{ url_for('Home', _anchor='text_city') }}">Enter city</a></li>
+				</ul>
+			  </div>
+		</div>
+	  </nav>
 	<br />
 	<br />
 	<div class="container">
@@ -36,17 +47,24 @@
 				</div>
 			</div>
 		</div>
-		<h4>Steel Weather Free Responsive Website Template
-			The Steel Weather Free Responsive Website Template is a sleek and dark template
-			that is completely editable. The bold design showcases your images nicely while
-			including clean areas for text. Even though this template was designed for a weather
-			website, you can easily edit it to fit a wide variety of website types. If you decide
-			to use this template, we would love to see it up and running! Drop us a link to your site
-			in the comments if you're interested.
-		</h4>
+		<br>
+		<div id="description">
+			<div>
+				<h1 style="text-align: center;">About</h1>
+				<br>
+				<h4>Steel Weather Free Responsive Website Template
+					The Steel Weather Free Responsive Website Template is a sleek and dark template
+					that is completely editable. The bold design showcases your images nicely while
+					including clean areas for text. Even though this template was designed for a weather
+					website, you can easily edit it to fit a wide variety of website types. If you decide
+					to use this template, we would love to see it up and running! Drop us a link to your site
+					in the comments if you're interested.
+				</h4>
+			</div>
+		</div>
 		<br>
 		<br>
-		<form class="form-inline">
+		<form class="form-inline" id="text_city">
 			<div class="form-group mx-sm-3 mb-2">
 				<label>Enter the City:</label>
 				<input type="text" class="form-control">

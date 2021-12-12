@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 content_list = []
 
+@app.route('/Home')
+def Home():
+    return render_template('index.html')
+
 @app.route('/', methods = ['GET'])
 
 def basic():
