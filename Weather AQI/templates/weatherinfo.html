@@ -20,6 +20,11 @@
             bottom: 0px;
             width: 50px;
             height: 491px;
+			border-collapse: collapse;
+  			border-radius: 1.5em;
+  			overflow: hidden;
+			box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+
         }
         .site-footer {
 			background-color: #26272b;
@@ -186,6 +191,14 @@
 				font-weight: 600
 			}
 		}
+
+		table {
+  			border-collapse: collapse;
+  			border-radius: 1.5em;
+  			overflow: hidden;
+			box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+		}
+
     </style>
     <title>AQI Result</title>
   </head>
@@ -194,7 +207,7 @@
       <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="{{url_for('Home')}}"><img
-              src="{{url_for('static', filename='images/aqi-logo.png')}}"></a>
+              src="{{url_for('static', filename='images/R.png')}}"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -216,14 +229,14 @@
       <hr style="border-color: azure;">
       <div class="row" style="margin-top : 50px">
                 <div class="col-6">
-            <table style="color: azure;" class="table table-bordered">
+            <table class="table">
                 {% for param in ["AQI", "category", "pollutant", "concentration", "CO", "NO2", "OZONE", "PM10", "PM25", "SO2"] %}
-                <tr>
-                    <th class="bg-dark text-white col-4">{{ param }}</th>
+                <tr class = "table-dark" >
+                    <th class=" bg-dark text-white col-4">{{ param }}</th>
                     {% if param in ["category", "pollutant", "concentration"] %}
-                    <td class="col-8">{{ results["aqiInfo"][param] }}</td>
+                    <td style="color: black;" class="col-8">{{ results["aqiInfo"][param] }}</td>
                     {% else %}
-                    <td class="col-8">{{ results[param] }}</td>
+                    <td style="color: black;" class="col-8">{{ results[param] }}</td>
                     {% endif %}
                 </tr>
                 {% endfor %}
