@@ -25,7 +25,7 @@ def homePage():
 def displayCityMap():
 
     city = request.args.get('city')
-    print(environ.get('api')+'?city='+city)
+    print(environ.get('API')+'?city='+city)
     headers={environ.get('API_KEY'): environ.get('API_VALUE'),"Content-type": "application/json"}
     req = requests.get(environ.get('api')+'?city='+city,headers=headers)
     data = req.json()
