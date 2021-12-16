@@ -6,8 +6,6 @@ pip install requests
 
 pip install python-dotenv
 
-python app.py
-
 pip install flask_monitoringdashboard
 
 git clone https://github.com/flask-dashboard/Flask-MonitoringDashboard.git
@@ -15,6 +13,8 @@ git clone https://github.com/flask-dashboard/Flask-MonitoringDashboard.git
 cd Flask-MonitoringDashboard
 
 python setup.py install
+
+python app.py
 
 
 //To check Dashboard
