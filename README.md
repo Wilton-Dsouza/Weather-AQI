@@ -11,7 +11,9 @@ python app.py
 pip install flask_monitoringdashboard
 
 git clone https://github.com/flask-dashboard/Flask-MonitoringDashboard.git
+
 cd Flask-MonitoringDashboard
+
 python setup.py install
 
 
