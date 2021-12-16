@@ -1,10 +1,12 @@
 from logging import debug
 from flask import Flask, render_template,request
+import flask_monitoringdashboard as dashboard
 import requests
 
 from os import environ
 
 app = Flask(__name__)
+dashboard.bind(app)
 
 
 
