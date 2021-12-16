@@ -1,10 +1,12 @@
 from logging import debug
 from flask import Flask, render_template,request
+import flask_monitoringdashboard as dashboard
 import requests
 
 from os import environ
 
 app = Flask(__name__)
+dashboard.bind(app)
 
 
 
@@ -23,7 +25,7 @@ def homePage():
 def displayCityMap():
 
     city = request.args.get('city')
-    print(environ.get('api')+'?city='+city)
+    print(environ.get('API')+'?city='+city)
     headers={environ.get('API_KEY'): environ.get('API_VALUE'),"Content-type": "application/json"}
     req = requests.get(environ.get('api')+'?city='+city,headers=headers)
     data = req.json()
